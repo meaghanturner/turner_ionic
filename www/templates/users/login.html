@@ -1,0 +1,36 @@
+<ion-view title="Event Form" id="page4" style="">
+  <ion-content padding="true" class="has-header">
+    <form id="eventForm-form1" class="list">
+      <label class="item item-input item-stacked-label" id="eventForm-input2">
+        <span class="input-label">Event Name</span>
+        <input placeholder="" type="text">
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input3">
+        <span class="input-label">Description</span>
+        <input placeholder="" type="text">
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input4">
+        <span class="input-label">Location</span>
+        <input placeholder="123 Maple Lane" type="text">
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input5">
+        <span class="input-label">Date</span>
+        <input placeholder="" type="date">
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input6">
+        <span class="input-label">Time</span>
+        <input placeholder="" type="time">
+      </label>
+      <label class="item item-select" id="eventForm-select1">
+        <span class="input-label">Age Restrictions</span>
+        <select>
+          <option>Adults Only - 18+</option>
+          <option>Adults Only - 19+ (Liquor Licensed)</option>
+          <option>18+ - Accompanied by an Adult</option>
+          <option>All Ages</option>
+        </select>
+      </label>
+      <a ui-sref="tabsController.eventView" id="eventForm-button1" class="button button-positive  button-block">Create Event</a>
+    </form>
+  </ion-content>
+</ion-view>

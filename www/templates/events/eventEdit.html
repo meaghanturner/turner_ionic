@@ -1,0 +1,49 @@
+<div ng-controller="EditController">
+<ion-view title="Event Form" id="page4" editable-form name="editableForm" onaftersave="saveEvent()">
+  <ion-content padding="true" class="has-header">
+    <form id="eventForm-form1" class="list" >
+      <label class="item item-input item-stacked-label" id="eventForm-input2">
+        <span class="input-label">Event Name</span>
+        <input type="text" ng-model="newEvent.event_title" required="true">
+
+    </div>
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input3">
+        <span class="input-label">Description</span>
+        <input type="text" ng-model="newEvent.event_description" required="true">
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input4">
+        <span class="input-label">Location</span>
+        <input placeholder="123 Maple Lane" type="text" ng-model="newEvent.event_location" required="true">
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input5">
+        <span class="input-label">Date</span>
+        <input type="date" ng-model="newEvent.event_date" required="true">
+      </label>
+      <label class="item item-input item-stacked-label" id="eventForm-input6">
+        <span class="input-label">Time</span>
+        <input type="time" ng-model="newEvent.event_time" required="true">
+      </label>
+      <!-- <label class="item item-select" id="eventForm-select1">
+        <span class="input-label">Age Restrictions</span>
+        <select ng-model="newEvent.event_age" required="true">
+          <option>All Ages </option>
+          <option>18+ (Accompanied by an Adult)</option>
+          <option>18+ (Adults Only)</option>
+          <option>19+</option>
+        </select>
+      </label> -->
+      <a ui-sref="tabsController.eventView" id="eventForm-button1" class="button button-positive  button-block">Create Event</a>
+
+      <!-- <input type="button" ng-click="reset(form)" value="Reset" />
+        <div class="modal-footer">
+                            <button type="button" ng-click="save()" >Save changes</button>
+                        </div> -->
+
+    </form>
+    <pre>newEvent= {{newEvent | json}}</pre>
+ <pre>master = {{master | json}}</pre>
+
+  </ion-content>
+   </div>
+</ion-view>
