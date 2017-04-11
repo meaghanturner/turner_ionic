@@ -1,33 +1,22 @@
- <!-- <ion-header-bar classic="bar-dark">
-	<h1 class="title">{{event.event_title}}</h1>
+<!-- <ion-header-bar classic="bar-dark">
+ <h1 class="title">{{event.event_title}}</h1>
+</ion-header-bar>-->
+
+<ion-header-bar classic="bar-dark">
+ <h1 class="title">About</h1>
 </ion-header-bar>
-
-<ion-content id="mainPost" class="padding">
-
-<div class="info">
-		<h2>About</h2>
-<p> {{event.event_description}}</p>
-
-</div>
-</ion-content>
-
-<ion-footer-bar class="bar-stable">
-	<button class="button button-dark icon-left ion-home" ng-click="goHome()">Home</button>
-</ion-footer-bar> -->
-
-
 <ion-view title="Event View" id="page3" style="">
-  <ion-content padding="true" class="has-header">
-    <h1 id="eventView-heading1" style="color: rgb(0, 0, 0);">Event Title</h1>
-    <div id="eventView-markdown1" class="show-list-numbers-and-dots">
-			<div class="info" ng-controller="DetailsController">
-					<h2>About</h2>
-			<p> {{event.event_description}}</p>
-     <!-- <p> Created by:{{event.user_id.name}}</p> -->
-			</div>
-    </div>
+ <ion-content padding="true" class="has-header">
+   <h1 id="eventView-heading1" style="color: rgb(0, 0, 0);">Event Title</h1>
+   <div id="eventView-markdown1" class="show-list-numbers-and-dots">
+     <div class="info" ng-controller="DetailsController">
+         <h2>About</h2>
+     <p> {{event.event_description}}</p>
+    <!-- <p> Created by:{{event.user_id.name}}</p> -->
+     </div>
+   </div>
 <a href="#events/update/"><button id="add" class="button button-positive button-block button-block" ng-click="toggle('edit', 0)">Edit</button></a>
-  <button type="button" ng-click="delete()" >Delete</button>
-    <!-- <button class="button button-assertive button-block button-block" ng-click="delete()">Delete</button> -->
-  </ion-content>
+
+   <button class="button button-assertive button-block button-block" ng-click="delete()">Delete</button>
+ </ion-content>
 </ion-view>

@@ -2,20 +2,40 @@
 	<h1 class="title">Main Feed</h1>
 </ion-header-bar>
 
-<ion-content>
+
+<ion-content class="has-header has-tabs">
+
+		<!-- Create a binding between the searchString model and the text field -->
+		<!-- <input type="text" ng-model="searchString" placeholder="Search Events" /> -->
+
+	<div class="list card"<a href="#events/form/"><button id="add" class="button button-calm button-block" ng-click="toggle('add', 0)">Add New</button></a>
+
 	<ion-list id="mainList">
-	<h2>All Events</h2>
-	<a href="#events/form/"><button id="add" class="button button-positive" ng-click="toggle('add', 0)">Add New</button></a>
+			<div class="list card" ng-repeat="events in event">
+					<ion-item id="item" ui-sref="tabsController.eventView"><h3>{{events.event_title}}</h3></ion-item>
+							<div class="item item-body" id="mainFeed-list-item-container5">
 
-		<ion-item ng-repeat="events in event" class="item item-thumbnail-center">
-			<h3>{{events.event_title}}</h3>
-			<p>{{events.user_id}}</p>
-
-
-
-			<a href="#details/{{ $index }}">View</a>
-
-		</ion-item>
-		
+							<div id="mainFeed-markdown6" class="show-list-numbers-and-dots">
+									<p>{{events.event_description}}</p>
+							</div>
+								<a href="#details/{{ events.id }}"><button id="add" class="button button-positive button-block" ng-click="toggle('edit', 0)">View</button></a>
+						 </div>
+			</div>
 	</ion-list>
 </ion-content>
+
+	<ion-item id="mainFeed-list-item20" ui-sref="tabsController.eventView" style="">Event Name</ion-item>
+	<div class="item item-body" id="mainFeed-list-item-container5" style="">
+		<div id="mainFeed-markdown6" class="show-list-numbers-and-dots">
+			<p style="margin-top:0px;color:#000000;">200 people attend! No Age limits.</p>
+		</div>
+	</div>
+
+<!-- <div class="list card" id="mainFeed-card24">
+	<ion-item id="mainFeed-list-item20" ui-sref="tabsController.eventView" style="">Event Name</ion-item>
+	<div class="item item-body" id="mainFeed-list-item-container5" style="">
+		<div id="mainFeed-markdown6" class="show-list-numbers-and-dots">
+			<p style="margin-top:0px;color:#000000;">200 people attend! No Age limits.</p>
+		</div>
+	</div>
+</div> -->

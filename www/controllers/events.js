@@ -15,16 +15,29 @@ $scope.loadInfo();
 }]);
 
 //VIEW ONE
-ThesisApp.controller('DetailsController',['$scope', '$http', '$ionicLoading', '$routeParams', function($scope, $http, $ionicLoading, $routeParams){
+ThesisApp.controller('DetailsController',['$scope', '$http', '$ionicLoading', '$routeParams','$location', function($scope, $http, $ionicLoading, $routeParams,$location){
 $ionicLoading.show(); //show spinner, show user app is still working
-console.log($routeParams.id); //which list item user clicks
+//console.log($routeParams.id); //which list item user clicks
 
-  $http.get("http://thesis-app.dev/events/")
+  $http.get("http://thesis-app.dev/events/"+$routeParams.id)
   .success(function(response){
-    $scope.event = response[$routeParams.id];
+    $scope.event = response;
 
 $ionicLoading.hide(); //hide/stop spinner
-  });
+});
+//console.log($routeParams.id); //which list item user clicks
+$scope.delete = function() {
+  $http.delete("http://thesis-app.dev/events/delete/"+$routeParams.id)
+  .success(function(response){
+    $scope.delete = response;
+    console.log('item deleted!');
+    $location.path("#/events");
+
+  }).error(function(response) {
+        console.log('something is wrong!');
+    });
+
+}
 }]);
 
 //POST FORM
@@ -42,7 +55,11 @@ ThesisApp.controller('FormController', ['$scope', '$http', function($scope, $htt
         console.log(response);
     });
   }
+
 }]);
+
+
+
 //EDIT FORM
 // ThesisApp.controller('FormController',['$scope', '$http', '$ionicLoading', '$routeParams', function($scope, $http, $ionicLoading, $routeParams){
 // // $ionicLoading.show(); //show spinner, show user app is still working
@@ -81,17 +98,3 @@ ThesisApp.controller('FormController', ['$scope', '$http', function($scope, $htt
 //
 //     });
 // }]);
-
-ThesisApp.controller("DetailsController", ['$scope', '$http',  function ($scope, $http) {
-// $scope.event = {};
-       $scope.delete = function() {
-//console.log("yes I'm being called");
-           $http.delete('http://thesis-app.dev/events/delete/:id', $scope.delete, {headers: {'X-Requested-With': 'XMLHttpRequest'}}).success(function(response) {
-                    console.log(response);
-                  })
-            .error(function(response) {
-                  console.log(response);
-              });
-            }
-
- }]);
