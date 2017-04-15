@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var ThesisApp = angular.module('ThesisApp', ['ionic', 'ngRoute', 'ngSanitize', '720kb.datepicker'])
+var ThesisApp = angular.module('ThesisApp', ['ionic', 'ngRoute', 'ngSanitize', '720kb.datepicker', 'ionic-material'])
 
 
 .run(function($ionicPlatform,$rootScope,$location) {
