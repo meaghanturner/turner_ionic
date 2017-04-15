@@ -4,7 +4,7 @@ ThesisApp.controller('ListController', ['$scope', '$http', '$ionicLoading',funct
        // $ionicLoading.show(); //start spinner
         $http.get("http://thesis-app.dev/events/") //get route to test paste into browser
         .success(function(response){
-          console.log (response);
+          //console.log (response);
           $scope.event = response;
           })
             .finally(function(){
@@ -41,7 +41,7 @@ $scope.delete = function() {
 }]);
 
 //POST FORM
-ThesisApp.controller('FormController', ['$scope', '$http', function($scope, $http) {
+ThesisApp.controller('FormController', ['$scope', '$http',  '$location', function($scope, $http,   $location) {
   $scope.newEvent = {};
   $scope.save = function() {
     //$scope.newEvent= angular.copy(event);
@@ -50,6 +50,11 @@ ThesisApp.controller('FormController', ['$scope', '$http', function($scope, $htt
 
     $http.post('http://thesis-app.dev/events/posts', $scope.newEvent, {headers: {'X-Requested-With': 'XMLHttpRequest'}}).success(function(response) {
           console.log(response);
+        })
+        .success(function(response){
+
+          $location.path("/events/");
+
         })
   .error(function(response) {
         console.log(response);
@@ -61,40 +66,38 @@ ThesisApp.controller('FormController', ['$scope', '$http', function($scope, $htt
 
 
 //EDIT FORM
-// ThesisApp.controller('FormController',['$scope', '$http', '$ionicLoading', '$routeParams', function($scope, $http, $ionicLoading, $routeParams){
-// // $ionicLoading.show(); //show spinner, show user app is still working
-// //console.log($routeParams.id); //which list item user clicks
-//
-//   $http.get("http://thesis-app.dev/events/edit")
-//   .success(function(response){
-//     $scope.event = response[$routeParams.id];
-//
-// $ionicLoading.hide(); //hide/stop spinner
-//   });
-// }]);
+ThesisApp.controller('UpdateController',['$scope', '$http', '$ionicLoading', '$routeParams', function($scope, $http, $ionicLoading, $routeParams){
+// $ionicLoading.show(); //show spinner, show user app is still working
+//console.log($routeParams.id); //which list item user clicks
+
+  $http.get("http://thesis-app.dev/events/edit/"+$routeParams.id)
+  .then( function(response){
+   // console.log('get info');
+    console.log(response);
+    $scope.editEvent = response.data;
+
+  // .error(function(response) {
+  //       console.log("not working");
+  //   });
+});
+
+
+}]);
 
 // //UPDATE FORM
 // ThesisApp.controller('UpdateController', ['$scope', '$http', function($scope, $http) {
-//   $scope.update = function(id) {
+//   $scope.editEvent = {};
+//   $scope.update = function() {
 //     //$scope.newEvent= angular.copy(event);
 //     // console.log("yes I'm being called");
 //     // console.log($scope.newEvent);
-//
-//     $http.post('http://thesis-app.dev/update/:id', $scope.newEvent, {headers: {'X-Requested-With': 'XMLHttpRequest'}}).success(function(response) {
+
+//     $http.post('http://thesis-app.dev/events/posts', $scope.newEvent, {headers: {'X-Requested-With': 'XMLHttpRequest'}}).success(function(response) {
 //           console.log(response);
 //         })
 //   .error(function(response) {
 //         console.log(response);
 //     });
 //   }
-// }]);
 
-// ThesisApp.controller('EditController',['$scope', '$http', '$ionicLoading', '$routeParams', function($scope, $http, $ionicLoading, $routeParams){
-//   console.log($routeParams.id); //which list item user clicks
-//
-//     $http.get("http://thesis-app.dev/events/edit/:id")
-//     .success(function(response){
-//       $scope.event = response[$routeParams.id];
-//
-//     });
 // }]);

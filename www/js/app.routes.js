@@ -20,12 +20,13 @@ ThesisApp.config(['$routeProvider', function($routeProvider){
     templateUrl: 'templates/events/eventForm.html'
   })
   .when('/events/edit/:id',{
-    controller: 'FormController',
-    templateUrl: 'templates/events/eventForm.html'
+    controller: 'UpdateController',
+    templateUrl: 'templates/events/eventUpdate.html'
   })
   .when('/events/update/:id',{
     controller: 'UpdateController',
-    templateUrl: 'templates/events/eventView.html'
+    templateUrl: 'templates/events/eventUpdate.html'
   })
+
   .otherwise({redirectTo: '/events'});
 }]);

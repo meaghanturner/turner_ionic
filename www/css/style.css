@@ -1,8 +1,16 @@
 /* Empty. Add your own CSS if you like */
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
 h1{
   color: white;
 }
 
 .bar-header{
   background-color: #ff9966;
+}
+
+a{
+  text-decoration: none;
 }

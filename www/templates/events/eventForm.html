@@ -16,7 +16,7 @@
       </label>
       <label class="item item-input item-stacked-label" id="eventForm-input5">
         <span class="input-label">Date</span>
-        <input type="date" ng-model="newEvent.event_date" required="true">
+        <input type="date" ng-model="newEvent.event_date" required="true" format="yyyy-mm-dd">
       </label>
       <label class="item item-input item-stacked-label" id="eventForm-input6">
         <span class="input-label">Time</span>
@@ -31,12 +31,11 @@
           <option>19+</option>
         </select>
       </label> -->
-      <a ui-sref="tabsController.eventView" id="eventForm-button1" class="button button-positive  button-block ng-click="save()"">Create Event</a>
 
       <input type="button" ng-click="reset(form)" value="Reset" />
         <div class="modal-footer">
-                            <button type="button" ng-click="save()" >Save </button>
-                        </div>
+            <button type="button" class="button button-positive" ng-click="save()">Save</button>
+        </div>
     </form>
     <pre>newEvent= {{newEvent | json}}</pre>
  <pre>master = {{master | json}}</pre>
