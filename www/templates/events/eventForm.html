@@ -16,7 +16,10 @@
       </label>
       <label class="item item-input item-stacked-label" id="eventForm-input5">
         <span class="input-label">Date</span>
-        <input type="date" ng-model="newEvent.event_date" required="true" format="yyyy-mm-dd">
+        <!-- <input type="date" ng-model="newEvent.event_date" required="true" format="yyyy-mm-dd"> -->
+        <datepicker date-format="yyyy-MM-dd">
+				<input data-ng-model="newEvent.date" type="date" placeholder="Set Event Date"/>
+			</datepicker>
       </label>
       <label class="item item-input item-stacked-label" id="eventForm-input6">
         <span class="input-label">Time</span>

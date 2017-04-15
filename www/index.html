@@ -3,29 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title></title>
+    <title>Lets' Go</title>
 
     <link rel="manifest" href="manifest.json">
 
-    <!-- un-comment this code to enable service worker
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js')
-          .then(() => console.log('service worker installed'))
-          .catch(err => console.log('Error', err));
-      }
-    </script>-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <link rel="stylesheet" href="css/angular-datepicker.css">
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
-    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
-    <link href="css/ionic.app.css" rel="stylesheet">
-    -->
-    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.4.4/randomColor.min.js"></script>
 
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="js/angular-datepicker.js"></script>
     <script src="js/angular-route.min.js"></script> <!-- includeing our modules -->
     <script src="js/angular-sanitize.min.js"></script>
+    <script type="js/app.routes.js">
 
+    </script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -36,7 +33,7 @@
       <script src="controllers/events.js"></script>
 
   </head>
-  <body bg-controller="EventsController">
+  <body>
 
     <ion-pane>
       <ion-header-bar class="bar-stable">
@@ -46,9 +43,9 @@
 
       <ion-pane data-ng-view >
         <!-- load the view -->
+
+
      </ion-pane>
-
-
        <ion-tabs class="tabs-stable tabs-icon-top" id="tabsController-tabs1" style="">
          <ion-tab title="Favorites" icon="ion-android-star" href="#" id="tabsController-tab1">
            <ion-nav-view name="tab1"></ion-nav-view>
