@@ -27,17 +27,20 @@ $scope.user ={
 $scope.login = function() {
   $http.post('http://thesis-app.dev/login', $scope.user, {headers: {'X-Requested-With': 'XMLHttpRequest'}}).success(function(response) {
   console.log($scope.user);
-//  $scope.user= angular.copy(user);
-  //console.log("yes I'm being called");
-   console.log($scope.user);
 })
 .success(function(response){
 console.log("user logged in!");
-  $location.path("/events/");
+//console.log(response)
+  // $location.path("/events/");
+  const token = response.token; //Grab Token
+  const base64Url = token.split(‘.’)[1]; //Decrypt Token
+  const base64 = base64Url.replace(‘-‘, ‘+’),replace(‘_’), (‘/‘);
+  console.log(window.atob(base64));
 
 })
 .error(function() {
 console.log("their was an error");
+console.log(response);
 });
 }
 
