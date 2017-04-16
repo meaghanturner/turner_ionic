@@ -7,6 +7,15 @@
 
 ThesisApp.config(['$routeProvider', function($routeProvider){
   $routeProvider
+  // .when('/signup',{
+  .when('/',{
+    controller: 'SignupController',
+    templateUrl: 'templates/users/signup.html'
+  })
+  .when('/login',{
+    controller: 'LoginController',
+    templateUrl: 'templates/users/login.html'
+  })
   .when('/events',{
     controller: 'ListController',
     templateUrl: 'templates/events/eventAll.html'
@@ -27,6 +36,8 @@ ThesisApp.config(['$routeProvider', function($routeProvider){
     controller: 'UpdateController',
     templateUrl: 'templates/events/eventUpdate.html'
   })
+
+
 
   .otherwise({redirectTo: '/events'});
 }]);
