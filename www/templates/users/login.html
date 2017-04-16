@@ -1,36 +1,22 @@
-<ion-view title="Event Form" id="page4" style="">
-  <ion-content padding="true" class="has-header">
-    <form id="eventForm-form1" class="list">
-      <label class="item item-input item-stacked-label" id="eventForm-input2">
-        <span class="input-label">Event Name</span>
-        <input placeholder="" type="text">
-      </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input3">
-        <span class="input-label">Description</span>
-        <input placeholder="" type="text">
-      </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input4">
-        <span class="input-label">Location</span>
-        <input placeholder="123 Maple Lane" type="text">
-      </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input5">
-        <span class="input-label">Date</span>
-        <input placeholder="" type="date">
-      </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input6">
-        <span class="input-label">Time</span>
-        <input placeholder="" type="time">
-      </label>
-      <label class="item item-select" id="eventForm-select1">
-        <span class="input-label">Age Restrictions</span>
-        <select>
-          <option>Adults Only - 18+</option>
-          <option>Adults Only - 19+ (Liquor Licensed)</option>
-          <option>18+ - Accompanied by an Adult</option>
-          <option>All Ages</option>
-        </select>
-      </label>
-      <a ui-sref="tabsController.eventView" id="eventForm-button1" class="button button-positive  button-block">Create Event</a>
+<ion-view title="Login" id="page5">
+  <ion-content padding="true" class="has-header" ng-controller="LoginController">
+    <form id="login-form2" class="list">
+      <ion-list id="login-list3">
+        <label class="item item-input" id="signup-input13">
+          <span class="input-label">Email</span>
+          <input placeholder="Enter Email" type="email" ng-model="user.email">
+        </label>
+        <label class="item item-input" id="login-input9">
+          <span class="input-label">Password</span>
+          <input type="password" placeholder="Enter your Password" ng-model="user.password">
+        </label>
+      </ion-list>
+      <div class="padding">
+          <button class="button button-full button-positive ink"  ng-click="login()">Login</button>
+      </div>
+
+      <a href="#/signup" id="login-button4" class="button button-positive  button-block button-clear">Or create an account</a>
+
     </form>
   </ion-content>
 </ion-view>

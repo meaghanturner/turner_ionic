@@ -1,25 +1,25 @@
 <ion-view title="Signup" id="page6" style="">
-  <ion-content padding="true" class="has-header">
-    <form id="signup-form3" class="list">
-      <ion-list id="signup-list4">
+  <ion-content padding="true" class="has-header" ng-controller="SignupController">
+    <form class="list">
+      <ion-list>
         <label class="item item-input" id="signup-input10">
           <span class="input-label">Name</span>
-          <input placeholder="" type="text">
+          <input placeholder="First and Last Name" type="text" ng-model="user.name" >
         </label>
         <label class="item item-input" id="signup-input13">
           <span class="input-label">Email</span>
-          <input placeholder="" type="email">
-        </label>
-        <label class="item item-input" id="signup-input11">
-          <span class="input-label">Username</span>
-          <input placeholder="" type="text">
+          <input placeholder="Enter a Email" type="email" ng-model="user.email">
         </label>
         <label class="item item-input" id="signup-input12">
           <span class="input-label">Password</span>
-          <input placeholder="" type="text">
+          <input placeholder="Enter an unique Password" type="text" ng-model="user.password">
         </label>
       </ion-list>
-      <button id="signup-button5" class="button button-positive  button-block">Sign up</button>
     </form>
+    <div class="padding">
+        <button type="submit"   class="button button-full button-positive" ng-click="signup()">Signup</button>
+    </div>
+    <a href="#/login" id="login-button4" class="button button-positive  button-full button-clear">Have an account? Login</a>
+
   </ion-content>
 </ion-view>
