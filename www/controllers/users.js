@@ -9,9 +9,7 @@ ThesisApp.controller('SignupController', ['$scope', '$http',  '$location', funct
           console.log($scope.user);
         })
         .success(function(response){
-
           $location.path("/events/");
-
         })
   .error(function() {
         console.log("their was an error");
@@ -19,8 +17,8 @@ ThesisApp.controller('SignupController', ['$scope', '$http',  '$location', funct
   }
 
 }]);
-ThesisApp.controller('LoginController', ['$scope', '$http',  '$location', function($scope, $http,$location) {
-$scope.user ={
+ThesisApp.controller('LoginController', ['$scope', '$http', '$location', function($scope, $http, $location, $window) {
+$scope.user = {
   email: $scope.email,
   password: $scope.password
 };
@@ -30,17 +28,13 @@ $scope.login = function() {
 })
 .success(function(response){
 console.log("user logged in!");
-//console.log(response)
-  // $location.path("/events/");
-  const token = response.token; //Grab Token
-  const base64Url = token.split(‘.’)[1]; //Decrypt Token
-  const base64 = base64Url.replace(‘-‘, ‘+’),replace(‘_’), (‘/‘);
-  console.log(window.atob(base64));
-
+console.log(response);
+  $location.path("/events/");
 })
 .error(function() {
 console.log("their was an error");
 console.log(response);
+
 });
 }
 

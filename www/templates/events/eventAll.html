@@ -1,14 +1,12 @@
-<ion-header-bar classic="bar-light">
-	  <button class="button button-clear icon ion-plus"></button>
+<ion-header-bar>
 	<h1 class="title">Main Feed</h1>
-
 </ion-header-bar>
 
 <ion-content>
 		<!-- Create a binding between the searchString model and the text field -->
 		<!-- <input type="text" ng-model="searchString" placeholder="Search Events" /> -->
 
-	<a href="#events/form/"><button id="add" class="button button-calm button-block" ng-click="toggle('add', 0)">Add New</button></a>
+	<a href="#events/form/"><button id="add" class="button button-calm button-full">Add New</button></a>
 
 	<ion-list id="mainList">
 			<div class="list card" ng-repeat="events in event">

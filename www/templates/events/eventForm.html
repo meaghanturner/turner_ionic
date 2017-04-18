@@ -1,30 +1,36 @@
+
 <div ng-controller="FormController">
-<ion-view title="Event Form" id="page4">
+  <ion-header-bar classic="bar-dark" id="formHead">
+    <div class="buttons">
+        <button class="button icon ion-arrow-left-c button-clear" onclick="back()">left</button>
+      </div>
+   <h1 class="title">New Event</h1>
+  </ion-header-bar>
+<ion-view title="Event Form">
   <ion-content padding="true" class="has-header">
-    <form id="eventForm-form1" class="list" role="form">
-      <label class="item item-input item-stacked-label" id="eventForm-input2">
+    <form id="eventForm" class="list" role="form">
+      <label class="item item-input item-stacked-label">
         <span class="input-label">Event Name</span>
-        <input type="text" ng-model="newEvent.event_title" required="true">
+        <input type="text" ng-model="newEvent.event_title" required="true" placeholder="Gregs' Birthday!"/>
       </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input3">
+      <label class="item item-input item-stacked-label">
         <span class="input-label">Description</span>
-        <input type="text" ng-model="newEvent.event_description" required="true">
+        <input type="text" ng-model="newEvent.event_description" required="true" placeholder="Celebrate his 22nd year."/>
       </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input4">
+      <label class="item item-input item-stacked-label">
         <span class="input-label">Location</span>
-        <input placeholder="123 Maple Lane" type="text" ng-model="newEvent.event_location" required="true">
+        <input type="text" ng-model="newEvent.event_location" required="true" placeholder="123 Maple Lane"/>
       </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input5">
-        <span class="input-label">Date</span>
-        <!-- <input type="date" ng-model="newEvent.event_date" required="true" format="yyyy-mm-dd"> -->
-        <datepicker date-format="yyyy-MM-dd">
-				<input data-ng-model="newEvent.date" type="date" placeholder="Set Event Date"/>
+      <label class="item item-label">
+        <span class="input-label">Date</span></label>
+        <!-- <input type="date" ng-model="newEvent.event_date" required="true" format="yyyy-mm-dd">  -->
+      <datepicker date-format="yyyy-MM-dd">
+				<input  type="text" ng-model="newEvent.event_date" placeholder="Set Event Date"/>
 			</datepicker>
-      </label>
-      <label class="item item-input item-stacked-label" id="eventForm-input6">
+      <!-- <label class="item item-input item-stacked-label">
         <span class="input-label">Time</span>
-        <input type="time" ng-model="newEvent.event_time" required="true">
-      </label>
+        <input type="time" step="1" ng-model="newEvent.event_time" format="HH:mm:ss"/>
+      </label> -->
       <!-- <label class="item item-select" id="eventForm-select1">
         <span class="input-label">Age Restrictions</span>
         <select ng-model="newEvent.event_age" required="true">
@@ -34,15 +40,11 @@
           <option>19+</option>
         </select>
       </label> -->
-
-      <input type="button" ng-click="reset(form)" value="Reset" />
-        <div class="modal-footer">
-            <button type="button" class="button button-positive" ng-click="save()">Save</button>
-        </div>
+        <!-- <button type="button" class="button button-full" id="button-save" ng-click="save()">Save</button> -->
+        <button type="button"  ng-click="save()">Save</button>
     </form>
     <pre>newEvent= {{newEvent | json}}</pre>
- <pre>master = {{master | json}}</pre>
-
   </ion-content>
-   </div>
+
 </ion-view>
+   </div>

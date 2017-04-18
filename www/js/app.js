@@ -6,11 +6,7 @@
 var ThesisApp = angular.module('ThesisApp', ['ionic', 'ngRoute', 'ngSanitize', '720kb.datepicker', 'ionic-material'])
 
 
-.run(function($ionicPlatform,$rootScope,$location) {
-   $rootScope.goHome = function(){
-      $location.path('/events');
-  //     send app to home page
-    };
+.run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     if(window.cordova && window.cordova.plugins.Keyboard) {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
@@ -32,3 +28,7 @@ var ThesisApp = angular.module('ThesisApp', ['ionic', 'ngRoute', 'ngSanitize', '
 .config(function($ionicConfigProvider) {
   $ionicConfigProvider.views.maxCache(0);
 })
+
+function back() {
+    window.history.back();
+}
