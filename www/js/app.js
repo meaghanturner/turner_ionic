@@ -29,6 +29,13 @@ var ThesisApp = angular.module('ThesisApp', ['ionic', 'ngRoute', 'ngSanitize', '
   $ionicConfigProvider.views.maxCache(0);
 })
 
+//make menu stay down for both IOS and andriod
+.config(function($ionicConfigProvider) {
+// $ionicConfigProvider.backButton.text('Go Back').icon('ion-chevron-left');
+$ionicConfigProvider.navBar.alignTitle("center");
+$ionicConfigProvider.tabs.position("bottom");
+$ionicConfigProvider.tabs.style("standard");
+})
 function back() {
     window.history.back();
 }

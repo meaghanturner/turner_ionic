@@ -1,23 +1,27 @@
 <ion-view title="Login" id="page5">
+  <ion-pane id="background">
   <ion-content padding="true" class="has-header" ng-controller="LoginController">
-    <form class="list">
-      <ion-list>
+      <img src="img/logo.svg" alt="Let's Go Logo">
 
-        <label class="item item-input">
+
+    <form class="list inset" id="authForm">
+      <ion-list>
+        <label class="item item-input item-stacked-label">
           <span class="input-label">Email</span>
-          <input type="email" placeholder="Enter your Email" ng-model="user.email">
+          <input type="email" placeholder="Enter your Email" ng-model="user.email" id="login">
         </label>
-        <label class="item item-input">
+        <label class="item item-input item-stacked-label">
           <span class="input-label">Password</span>
-          <input type="password" placeholder="Enter your Password" ng-model="user.password">
+          <input type="password" placeholder="Enter your Password" ng-model="user.password" id="login">
         </label>
       </ion-list>
       <div class="padding">
-          <button class="button button-full button-positive ink" ng-click="login()">Login</button>
+          <button class="button button-blue button-full" ng-click="login()">Login</button>
       </div>
 
-      <a href="#/signup"class="button button-positive  button-block button-clear">Or create an account</a>
+      <a href="#/signup" class="button button-blue  button-block button-clear" id="login-button">Or create an account</a>
 
     </form>
   </ion-content>
+</ion-pane>
 </ion-view>

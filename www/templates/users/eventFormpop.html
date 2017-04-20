@@ -1,0 +1,42 @@
+
+<div ng-controller="FormController">
+<ion-view title="Event Form">
+  <ion-content padding="true" class="has-header">
+    <form id="eventForm" class="list" role="form">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Event Name</span>
+        <input type="text" ng-model="newEvent.event_title" required="true" placeholder="Gregs' Birthday!"/>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Description</span>
+        <input type="text" ng-model="newEvent.event_description" required="true" placeholder="Celebrate his 22nd year."/>
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Location</span>
+        <input type="text" ng-model="newEvent.event_location" required="true" placeholder="123 Maple Lane"/>
+      </label>
+      <label class="item item-label">
+        <span class="input-label">Date</span></label>
+        <!-- <input type="date" ng-model="newEvent.event_date" required="true" format="yyyy-mm-dd">  -->
+      <datepicker date-format="yyyy-MM-dd">
+				<input  type="text" ng-model="newEvent.event_date" placeholder="Set Event Date"/>
+			</datepicker>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">Time</span>
+        <input type="time" ng-model="newEvent.event_time" format="HH:mm:ss"/>
+      </label>
+      <!-- <label class="item item-select" id="eventForm-select1">
+        <span class="input-label">Age Restrictions</span>
+        <select ng-model="newEvent.event_age" required="true">
+          <option>All Ages </option>
+          <option>18+ (Accompanied by an Adult)</option>
+          <option>18+ (Adults Only)</option>
+          <option>19+</option>
+        </select>
+      </label> -->
+        <button type="button" class="button button-blue button-full" ng-click="save()">Save</button>
+    </form>
+  </ion-content>
+
+</ion-view>
+   </div>

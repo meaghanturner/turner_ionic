@@ -1,26 +1,81 @@
-/* Empty. Add your own CSS if you like */
+.title{
+  margin-top: 5px;
+  margin-bottom: 5px;
 
+}
+
+/************TYPOGRAPHY STYLES************/
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:'Open Sans', sans-serif;Arial, Helvetica, sans-serif;
+  font-size: 100%;
 }
 h1{
   color: white;
 }
-
-.bar-header{
-  background-color: #ff9966;
-}
-
-#formHead{
-  background-color: #3399ff;
-}
-#button-save{
-  background-color: #3399ff;
+.slogan
+{
   color: white;
+margin-top: 0;
 }
-#button-save:hover{
-  background-color: #0e7be7;
+
+.sloganHead{
+  padding-bottom: 190px;
+}
+
+p{
+  font-size: 16px;
 }
 a{
   text-decoration: none;
+}
+
+.bar-footer{
+  display: none;
+}
+
+/************COLOUR STYLES************/
+#brandblue{
+  background-color: #3399ff;
+}
+#branndorange{
+  background-color: #ff9966;
+}
+.bar-header{
+  background-color: #ff9966;
+}
+#authForm .input-label{
+  color: white;
+}
+#login, #signup
+{
+  background-color: white;
+  border-radius: 30px;
+  padding: 5px 0 5px 15px;
+}
+#login-button{
+  color: white;
+}
+
+/************BUTTONS STYLES************/
+
+.button{
+    border-radius: 30px;
+}
+
+.button-blue{
+  background-color: #3399ff;
+  color: white;
+}
+.button-blue:hover{
+  background-color: #0e7be7;
+  color: white;
+}
+
+
+
+/************IMAGE STYLES************/
+#background{
+  background-image: url("../img/background-black.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
 }

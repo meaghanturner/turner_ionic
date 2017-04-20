@@ -1,25 +1,29 @@
-<ion-header-bar>
-	<h1 class="title">Main Feed</h1>
+<ion-header-bar class="main">
+	<h1 padding="true" class="title">Main Feed</h1>
+
 </ion-header-bar>
 
-<ion-content>
-		<!-- Create a binding between the searchString model and the text field -->
-		<!-- <input type="text" ng-model="searchString" placeholder="Search Events" /> -->
-
+<ion-content padding="true">
 	<a href="#events/form/"><button id="add" class="button button-calm button-full">Add New</button></a>
+	  <label class="item item-input">
+	    <i class="icon ion-search placeholder-icon"></i>
+	    <input type="text" placeholder="Search" ng-model="searchText">
+	  </label>
 
+<p><input type="text"></p>
 	<ion-list id="mainList">
-			<div class="list card" ng-repeat="events in event">
-
-						<div class="item item-divider">
-	 						<h3>{{events.event_title}}</h3>
- 						</div>
-						<a href="#/details/{{ events.id }}">
-							<div class="item item-text-wrap" class="show-list-numbers-and-dots">
-									<p>{{events.event_description}}</p>
-							</div>
-								<!-- <a href="#details/{{ events.id }}"><button id="add" class="button button-light button-full" ng-click="toggle('edit', 0)">View</button></a> -->
-</a>
+			<div class="list card" ng-repeat="events in event | filter:searchText | orderBy: event_title">
+				<div class="item item-image">
+			     <img src="img/background-black-2.jpg">
+   	 		</div>
+				<a href="#/details/{{ events.id }}" class="item"
+					<div class="item" class="show-list-numbers-and-dots">
+							<h2 ng-model="searchText">{{events.event_title}}</h2>
+							<p>{{events.event_description}}</p>
+							<p ng-model="searchText">Category: </p>
+				  </div>
+				</a>
 			</div>
+
 	</ion-list>
 </ion-content>

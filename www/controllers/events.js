@@ -1,4 +1,3 @@
-//VIEW ALL
 ThesisApp.controller('ListController', ['$scope', '$http', '$ionicLoading',function($scope, $http, $ionicLoading){
     $scope.loadInfo = function(){
        // $ionicLoading.show(); //start spinner
@@ -41,13 +40,14 @@ $scope.delete = function() {
 }]);
 
 //POST FORM
-ThesisApp.controller('FormController', ['$scope', '$http', function($scope, $http) {
+ThesisApp.controller('FormController', ['$scope', '$http', '$location' ,function($scope, $http, $location) {
   $scope.newEvent = {};
   $scope.save = function() {
 
     $http.post('http://thesis-app.dev/events/posts', $scope.newEvent, { headers: {'X-Requested-With': 'XMLHttpRequest'}})
     .success(function(response) {
           console.log(response);
+            $location.path("#/events");
         })
   .error(function(response) {
         console.log(response);

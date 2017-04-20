@@ -8,7 +8,7 @@
     <link rel="manifest" href="manifest.json">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material%20Icons">
-    <link href="https://fonts.googleapis.com/css?family=RobotoDraft%3A400%2C500%2C700%2C400italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/angular-datepicker.css">
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="lib/ionic-material/dist/ionic.material.min.css" rel="stylesheet">
@@ -22,7 +22,7 @@
     <script src="js/angular-datepicker.js"></script>
     <script src="js/angular-route.min.js"></script> <!-- includeing our modules -->
     <script src="js/angular-sanitize.min.js"></script>
-    <script type="js/app.routes.js"></script>
+
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -43,27 +43,28 @@
 
       <ion-pane data-ng-view="">
         <!-- load the view -->
-
-
      </ion-pane>
 
-       <ion-tabs class="tabs-stable tabs-icon-top" id="tabsController-tabs1" style="">
-         <ion-tab title="Favorites" icon="ion-android-star" href="#" id="tabsController-tab1">
-           <ion-nav-view name="tab1"></ion-nav-view>
-         </ion-tab>
-         <ion-tab title="Badges" icon="ion-ribbon-a" href="#" id="tabsController-tab2">
-           <ion-nav-view name="tab2"></ion-nav-view>
-         </ion-tab>
-         <ion-tab title="Search" icon="ion-ios-search-strong" href="#" id="tabsController-tab3">
-           <ion-nav-view name="tab3"></ion-nav-view>
-         </ion-tab>
-         <ion-tab title="Events" icon="ion-ios-list" href="#/events" id="tabsController-tab4">
-           <ion-nav-view name="tab4"></ion-nav-view>
-         </ion-tab>
-         <ion-tab title="Profile" icon="ion-person" href="#" id="tabsController-tab5">
-           <ion-nav-view name="tab5"></ion-nav-view>
-         </ion-tab>
-       </ion-tabs>
+
+
+  <ion-tabs class="tabs-stable tabs-icon-top" id="tabsController-tabs1" style="">
+    <ion-tab title="Favorites" icon="ion-android-star" href="#" id="tabsController-tab1">
+      <ion-nav-view name="tab1"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Badges" icon="ion-ribbon-a" href="#" id="tabsController-tab2">
+      <ion-nav-view name="tab2"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Search" icon="ion-ios-search-strong" href="#" id="tabsController-tab3">
+      <ion-nav-view name="tab3"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Events" icon="ion-ios-list" href="#/events" id="tabsController-tab4">
+      <ion-nav-view name="tab4"></ion-nav-view>
+    </ion-tab>
+    <ion-tab title="Profile" icon="ion-person" href="#" id="tabsController-tab5">
+      <ion-nav-view name="tab5"></ion-nav-view>
+    </ion-tab>
+  </ion-tabs>
+
 
   </body>
 </html>

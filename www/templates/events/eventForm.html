@@ -1,10 +1,10 @@
 
 <div ng-controller="FormController">
-  <ion-header-bar classic="bar-dark" id="formHead">
+  <ion-header-bar classic="bar-dark" id="brandblue">
     <div class="buttons">
         <button class="button icon ion-arrow-left-c button-clear" onclick="back()">left</button>
       </div>
-   <h1 class="title">New Event</h1>
+   <h1 class="title" padding="true">New Event</h1>
   </ion-header-bar>
 <ion-view title="Event Form">
   <ion-content padding="true" class="has-header">
@@ -27,10 +27,10 @@
       <datepicker date-format="yyyy-MM-dd">
 				<input  type="text" ng-model="newEvent.event_date" placeholder="Set Event Date"/>
 			</datepicker>
-      <!-- <label class="item item-input item-stacked-label">
+      <label class="item item-input item-stacked-label">
         <span class="input-label">Time</span>
-        <input type="time" step="1" ng-model="newEvent.event_time" format="HH:mm:ss"/>
-      </label> -->
+        <input type="time" ng-model="newEvent.event_time" format="HH:mm:ss"/>
+      </label>
       <!-- <label class="item item-select" id="eventForm-select1">
         <span class="input-label">Age Restrictions</span>
         <select ng-model="newEvent.event_age" required="true">
@@ -40,8 +40,7 @@
           <option>19+</option>
         </select>
       </label> -->
-        <!-- <button type="button" class="button button-full" id="button-save" ng-click="save()">Save</button> -->
-        <button type="button"  ng-click="save()">Save</button>
+        <button type="button" class="button button-blue button-full" ng-click="save()">Save</button>
     </form>
     <pre>newEvent= {{newEvent | json}}</pre>
   </ion-content>
