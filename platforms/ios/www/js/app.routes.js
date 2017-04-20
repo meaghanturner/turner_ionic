@@ -9,7 +9,7 @@ ThesisApp.config(['$routeProvider', function($routeProvider){
   $routeProvider
   .when('/',{
     controller: 'SignupController',
-    templateUrl: 'templates/users/welcome.html'
+    templateUrl: 'templates/shared/welcome.html'
   })
   .when('/signup',{
     controller: 'SignupController',
@@ -30,6 +30,7 @@ ThesisApp.config(['$routeProvider', function($routeProvider){
   .when('/events/form',{
     controller: 'FormController',
     templateUrl: 'templates/events/eventForm.html'
+
   })
   .when('/events/edit/:id',{
     controller: 'UpdateController',

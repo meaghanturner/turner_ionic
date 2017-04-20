@@ -1,26 +1,29 @@
 <ion-view title="Signup" id="page6" style="">
-  <ion-pane id="background">
-  <ion-content padding="true" class="has-header" ng-controller="SignupController">
-    <form class="list">
-      <ion-list>
-          <label class="item item-input">
-            <span class="input-label">Name</span>
-            <input placeholder="First and Last Name" type="text" id="name" name="name" ng-model="user.name" >
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Email</span>
-            <input placeholder="Enter a Email" type="email" id="email" name="email" ng-model="user.email">
-          </label>
-          <label class="item item-input">
-            <span class="input-label">Password</span>
-            <input placeholder="Enter an unique Password" type="password" id="password" name="password" type="text" ng-model="user.password">
-          </label>
-      </ion-list>
-    </form>
-    <div class="padding">
-        <button type="submit" class="button button-full button-positive" ng-click="signup()">Signup</button>
-    </div>
-    <a href="#/login" id="login-button4" class="button button-positive  button-full button-clear">Have an account? Login</a>
-  </ion-content>
-</ion-pane>
+   <ion-pane id="background">
+      <ion-content padding="true" class="has-header" ng-controller="SignupController">
+         <img src="img/logo.svg" alt="Let's Go Logo">
+
+         <form class="list" id="authForm">
+            <ion-list>
+               <label class="item item-input item-stacked-label">
+                  <span class="input-label">Name</span>
+                  <input placeholder="First and Last Name" type="text" id="signup" name="name" ng-model="user.name">
+               </label>
+               <label class="item item-input item-stacked-label">
+                  <span class="input-label">Email</span>
+                  <input placeholder="Enter a Email" type="email" id="signup" name="email" ng-model="user.email">
+               </label>
+               <label class="item item-input item-stacked-label">
+                  <span class="input-label">Password</span>
+                  <input placeholder="Enter an unique Password" type="password" id="signup" name="password" type="text" ng-model="user.password">
+               </label>
+            </ion-list>
+         </form>
+
+         <div class="padding">
+            <button type="submit" class="button button-full button-blue" ng-click="signup()">Signup</button>
+         </div>
+         <a href="#/login" id="login-button" class="button button-full button-clear">Have an account? Login</a>
+      </ion-content>
+   </ion-pane>
 </ion-view>

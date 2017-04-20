@@ -1,27 +1,35 @@
 <ion-header-bar classic="bar-dark">
-  <!-- <button class="button ion-arrow-left-c" onclick="goBack()" pull-right></button> -->
-  <div class="buttons">
+   <!-- <button class="button ion-arrow-left-c" onclick="goBack()" pull-right></button> -->
+   <div class="buttons">
       <button class="button icon ion-arrow-left-c button-clear" onclick="back()">left</button>
-    </div>
-    <h1 class="title">About</h1>
-    </div>
- <!-- <h1 class="title">About</h1> -->
-
+   </div>
+   <h1 class="title" padding="true">About</h1>
+   </div>
+   <!-- <h1 class="title">About</h1> -->
 </ion-header-bar>
+
 <ion-view title="Event View" id="page3" style="">
- <ion-content padding="true" class="has-header">
-   <h1 id="eventView-heading1" style="color: rgb(0, 0, 0);">{{event.event_title}}</h1>
-   <div id="eventView-markdown1" class="show-list-numbers-and-dots">
-     <div class="info" ng-controller="DetailsController">
-        <p> {{event.event_description}}</p>
-    <!-- <p> Created by:{{event.user_id.name}}</p> -->
-     </div>
-   </div>
-   </div>
-   <div class="button-bar">
-     <a href="#/events/edit/{{event.id}}" ><button id="add" class="button button-positive" ng-click="">Edit</button></a>
-     <a href="#"><button class="button button-assertive button" ng-click="delete()">Delete</button></a>
-     <a href="#"><button class="button button-balanced button" ng-click="mylist()">Save to list</button></a>
-   </div>
- </ion-content>
+   <ion-content padding="true" class="has-header">
+      <div class="item item-image">
+         <img ng-src="img/events/{{event.event_image}}">
+      </div>
+      <h1 id="eventView-heading1" style="color: rgb(0, 0, 0);">{{event.event_title}}</h1>
+      <div id="eventView-markdown1" class="show-list-numbers-and-dots">
+         <div class="info" ng-controller="DetailsController">
+            <p> {{event.event_description}}</p>
+         </div>
+      </div>
+      </div>
+      <div class="button-bar">
+         <a href="#/events/edit/{{event.id}}">
+            <button id="add" class="button button-positive" ng-click="">Edit</button>
+         </a>
+         <a href="#">
+            <button class="button button-assertive button" ng-click="delete()">Delete</button>
+         </a>
+         <a href="#">
+            <button class="button button-balanced button" ng-click="mylist()">Save to list</button>
+         </a>
+      </div>
+   </ion-content>
 </ion-view>

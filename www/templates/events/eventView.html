@@ -16,20 +16,24 @@
       <h1 id="eventView-heading1" style="color: rgb(0, 0, 0);">{{event.event_title}}</h1>
       <div id="eventView-markdown1" class="show-list-numbers-and-dots">
          <div class="info" ng-controller="DetailsController">
-            <p> {{event.event_description}}</p>
+           <p><strong>Date:</strong> {{event.event_date}}</p>
+           <p><strong>Time:</strong> {{event.event_time}}</p>
+            <p> <strong>Description:</strong> {{event.event_description}}</p>
+
+
          </div>
       </div>
       </div>
-      <div class="button-bar">
+      <a href="#">
+         <button class="button button-blue button-full" ng-click="mylist()">Save</button>
+      </a>
          <a href="#/events/edit/{{event.id}}">
-            <button id="add" class="button button-positive" ng-click="">Edit</button>
+            <button id="add" class="button button-stable button" ng-click="">Edit</button>
          </a>
          <a href="#">
             <button class="button button-assertive button" ng-click="delete()">Delete</button>
          </a>
-         <a href="#">
-            <button class="button button-balanced button" ng-click="mylist()">Save to list</button>
-         </a>
-      </div>
+
+
    </ion-content>
 </ion-view>

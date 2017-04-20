@@ -16,7 +16,7 @@ h1 {
     margin-top: 0;
 }
 .sloganHead {
-    padding-bottom: 150px;
+    padding-bottom: 50px;
 }
 p {
     font-size: 16px;
@@ -26,6 +26,10 @@ a {
 }
 .bar-footer {
     display: none;
+}
+.coming{
+  color: white;
+  text-align: center;
 }
 /************COLOUR STYLES************/
 
@@ -69,4 +73,18 @@ a {
     background-image: url("../img/background-black.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+}
+#badges{
+    background-image: url("../img/Profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#favorites {
+    background-image: url("../img/Profile.jpg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.badge{
+  width: 40px;
 }

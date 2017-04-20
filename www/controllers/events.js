@@ -1,7 +1,8 @@
 ThesisApp.controller('ListController', ['$scope', '$http', '$ionicLoading',function($scope, $http, $ionicLoading){
     $scope.loadInfo = function(){
        // $ionicLoading.show(); //start spinner
-        $http.get("http://thesis-app.dev/events/") //get route to test paste into browser
+       $http.get("http://thesis-app.dev//events/")
+      //$http.get("http://thesis-app.dev/events/") //get route to test paste into browser
         .success(function(response){
           //console.log (response);
           $scope.event = response;
@@ -18,7 +19,7 @@ ThesisApp.controller('DetailsController',['$scope', '$http', '$ionicLoading', '$
 $ionicLoading.show(); //show spinner, show user app is still working
 //console.log($routeParams.id); //which list item user clicks
 
-  $http.get("http://thesis-app.dev/events/"+$routeParams.id)
+  $http.get("http://thesis-app.dev//events/"+$routeParams.id)
   .success(function(response){
     $scope.event = response;
 
@@ -26,7 +27,7 @@ $ionicLoading.hide(); //hide/stop spinner
 });
 //console.log($routeParams.id); //which list item user clicks
 $scope.delete = function() {
-  $http.delete("http://thesis-app.dev/events/delete/"+$routeParams.id)
+  $http.delete("http://thesis-app.dev//events/delete/"+$routeParams.id)
   .success(function(response){
     $scope.delete = response;
     console.log('item deleted!');
@@ -44,7 +45,7 @@ ThesisApp.controller('FormController', ['$scope', '$http', '$location' ,function
   $scope.newEvent = {};
   $scope.save = function() {
 
-    $http.post('http://thesis-app.dev/events/posts', $scope.newEvent, { headers: {'X-Requested-With': 'XMLHttpRequest'}})
+    $http.post('http://thesis-app.dev//events/posts', $scope.newEvent, { headers: {'X-Requested-With': 'XMLHttpRequest'}})
     .success(function(response) {
           console.log(response);
             $location.path("#/events");

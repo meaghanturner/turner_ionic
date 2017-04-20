@@ -1,6 +1,6 @@
 {
   "name": "thesis_ionic",
-  "app_id": "59d1828a",
+  "app_id": "f0d86f3d",
   "gulpStartupTasks": [
     "sass",
     "watch"

@@ -3,6 +3,7 @@
   "version": "1.1.1",
   "description": "thesis_ionic: An Ionic project",
   "dependencies": {
+    "@ionic/cloud-angular": "^0.12.0",
     "cordova-android": "^6.1.2",
     "gulp": "^3.5.6",
     "gulp-concat": "^2.2.0",

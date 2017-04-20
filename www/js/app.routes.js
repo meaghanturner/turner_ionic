@@ -40,5 +40,14 @@ ThesisApp.config(['$routeProvider', function($routeProvider){
     controller: 'UpdateController',
     templateUrl: 'templates/events/eventUpdate.html'
   })
+  .when('/badges',{
+    controller: 'ListController',
+    templateUrl: 'templates/shared/badges.html'
+  })
+  .when('/favs',{
+    controller: 'ListController',
+    templateUrl: 'templates/shared/favs.html'
+  })
+
   .otherwise({redirectTo: '/events'});
 }]);
