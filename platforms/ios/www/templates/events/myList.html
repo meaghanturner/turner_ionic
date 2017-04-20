@@ -1,0 +1,23 @@
+<ion-header-bar classic="bar-light">
+	<h1 class="title">Saved Events</h1>
+	<div class="buttons">
+      <button class="button icon ion-arrow-left-c button-clear" onclick="back()">left</button>
+    </div>
+</ion-header-bar>
+
+<ion-content>
+	<ion-list id="mainList">
+	<h2>Saved Events</h2>
+		<ion-item ng-repeat="events in event" class="item item-thumbnail-center">
+			<h3>{{events.event_title}}</h3>
+			<p>{{events.user_id}}</p>
+
+
+
+			<a href="#details/{{ $index }}">View</a>
+
+		</ion-item>
+		<a href="#events/form/"><button id="add" class="button button-positive" ng-click="toggle('add', 0)">Add New</button></a>
+
+	</ion-list>
+</ion-content>

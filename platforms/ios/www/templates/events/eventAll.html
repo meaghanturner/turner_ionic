@@ -1,0 +1,25 @@
+<ion-header-bar>
+	<h1 class="title">Main Feed</h1>
+</ion-header-bar>
+
+<ion-content>
+		<!-- Create a binding between the searchString model and the text field -->
+		<!-- <input type="text" ng-model="searchString" placeholder="Search Events" /> -->
+
+	<a href="#events/form/"><button id="add" class="button button-calm button-full">Add New</button></a>
+
+	<ion-list id="mainList">
+			<div class="list card" ng-repeat="events in event">
+
+						<div class="item item-divider">
+	 						<h3>{{events.event_title}}</h3>
+ 						</div>
+						<a href="#/details/{{ events.id }}">
+							<div class="item item-text-wrap" class="show-list-numbers-and-dots">
+									<p>{{events.event_description}}</p>
+							</div>
+								<!-- <a href="#details/{{ events.id }}"><button id="add" class="button button-light button-full" ng-click="toggle('edit', 0)">View</button></a> -->
+</a>
+			</div>
+	</ion-list>
+</ion-content>
