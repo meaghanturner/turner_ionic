@@ -18,12 +18,12 @@
    <ion-list id="mainList">
       <div class="list card" ng-repeat="events in event | filter:searchText | orderBy: event_title">
          <div class="item item-image">
-            <img src="img/background-black-2.jpg">
+            <img ng-src="img/events/{{events.event_image}}">
+
          </div>
          <a href="#/details/{{ events.id }}" class="item" <div class="item" class="show-list-numbers-and-dots">
             <h2 ng-model="searchText">{{events.event_title}}</h2>
             <p>{{events.event_description}}</p>
-            <p ng-model="searchText">Category: </p>
       </div>
       </a>
       </div>

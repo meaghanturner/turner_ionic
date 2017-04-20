@@ -11,14 +11,12 @@
 <ion-view title="Event View" id="page3" style="">
    <ion-content padding="true" class="has-header">
       <div class="item item-image">
-         <img src="img/background-black-2.jpg">
+         <img ng-src="img/events/{{event.event_image}}">
       </div>
       <h1 id="eventView-heading1" style="color: rgb(0, 0, 0);">{{event.event_title}}</h1>
       <div id="eventView-markdown1" class="show-list-numbers-and-dots">
          <div class="info" ng-controller="DetailsController">
-
             <p> {{event.event_description}}</p>
-            <!-- <p> Created by:{{event.user_id.name}}</p> -->
          </div>
       </div>
       </div>
